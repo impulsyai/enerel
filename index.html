@@ -908,16 +908,17 @@
       background: #FFFFFF;
       border: 1px solid var(--border-light);
       border-radius: var(--radius-sm);
-      padding: 18px;
+      padding: 16px 18px;
       margin: 18px 0;
     }
 
     .number-row {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
-      padding: 8px 0;
+      align-items: center;
+      padding: 9px 0;
       border-bottom: 1px solid #F1F5F9;
+      gap: 12px;
     }
 
     .number-row:last-child {
@@ -926,21 +927,41 @@
     }
 
     .number-row .label {
-      font-size: 0.86rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
+      line-height: 1.35;
+      flex-grow: 1;
     }
 
     .number-row .val {
       font-family: var(--font-display);
-      font-size: 1.25rem;
+      font-size: 1.22rem;
       font-weight: 700;
       color: var(--text-heading);
+      white-space: nowrap;
+      flex-shrink: 0;
+      text-align: right;
     }
 
     .number-row .val.green-bold {
-      font-size: 1.55rem;
+      font-size: 1.50rem;
       color: var(--green-primary);
       font-weight: 800;
+      white-space: nowrap;
+    }
+
+    /* Linha destacada de economia no simulador */
+    .number-row.featured-row {
+      background: var(--green-soft);
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      margin: 4px -6px;
+      border: 1px solid var(--border-green);
+    }
+
+    .number-row.featured-row .label {
+      color: var(--green-deep);
+      font-weight: 700;
     }
 
     .feature-list {
@@ -1366,8 +1387,14 @@
     }
 
     @media (max-width: 640px) {
-      .sim-box { padding: 24px 18px; }
-      .slider-value-box { font-size: 2.8rem; }
+      .sim-box { padding: 20px 14px; }
+      .slider-value-box { font-size: 2.7rem; }
+      .numbers-box { padding: 12px 12px; }
+      .number-row { padding: 7px 0; gap: 8px; }
+      .number-row.featured-row { padding: 8px 10px; margin: 4px 0; }
+      .number-row .label { font-size: 0.80rem; line-height: 1.25; }
+      .number-row .val { font-size: 1.08rem; white-space: nowrap !important; }
+      .number-row .val.green-bold { font-size: 1.28rem; white-space: nowrap !important; }
       .trust-grid { grid-template-columns: 1fr; }
       .float-wa span { display: none; }
       .float-wa { padding: 14px; border-radius: 50%; }
@@ -1940,7 +1967,7 @@
                   <span class="label">Nova fatura estimada (taxa básica):</span>
                   <span class="val" id="val-new-proprio">R$ 95</span>
                 </div>
-                <div class="number-row">
+                <div class="number-row featured-row">
                   <span class="label">Economia mensal estimada:</span>
                   <span class="val green-bold" id="val-save-proprio">R$ 1.105</span>
                 </div>
@@ -1983,7 +2010,7 @@
                   <span class="label">Fatura com créditos aplicados:</span>
                   <span class="val" id="val-new-assinatura">R$ 1.020</span>
                 </div>
-                <div class="number-row">
+                <div class="number-row featured-row">
                   <span class="label">Economia mensal direta:</span>
                   <span class="val green-bold" id="val-save-assinatura">R$ 180</span>
                 </div>
