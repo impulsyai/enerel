@@ -1012,7 +1012,7 @@
     }
 
     /* ════════════════════════════════════════════════════════════
-       8. TABELA COMPARATIVA
+       8. TABELA COMPARATIVA (DESKTOP) & CARDS (MOBILE)
     ════════════════════════════════════════════════════════════ */
     .comparison-section {
       padding: 80px 0;
@@ -1068,6 +1068,112 @@
     .tag-positive {
       color: var(--green-primary);
       font-weight: 700;
+    }
+
+    /* Cards comparativos verticais no mobile (dispensam arrastar horizontalmente) */
+    .mobile-comparison-cards {
+      display: none;
+    }
+
+    .mob-comp-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .mob-comp-card.highlight {
+      border: 2px solid var(--green-primary);
+      background: #FAFDFB;
+      box-shadow: var(--shadow-card);
+    }
+
+    .mob-comp-card.card-muted {
+      background: #F8FAFC;
+      border-style: dashed;
+    }
+
+    .mob-comp-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 10px;
+      background: var(--green-primary);
+      color: #FFFFFF;
+    }
+
+    .mob-comp-badge.badge-neutral {
+      background: #E2E8F0;
+      color: var(--text-heading);
+    }
+
+    .mob-comp-badge.badge-muted {
+      background: #FEE2E2;
+      color: #991B1B;
+    }
+
+    .mob-comp-title {
+      font-size: 1.25rem;
+      color: var(--green-deep);
+      margin-bottom: 4px;
+      font-weight: 700;
+    }
+
+    .mob-comp-highlight-val {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--green-primary);
+      margin-bottom: 8px;
+    }
+
+    .mob-comp-highlight-val.val-blue {
+      color: #0284C7;
+    }
+
+    .mob-comp-highlight-val.val-red {
+      color: #DC2626;
+    }
+
+    .mob-comp-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .mob-comp-list {
+      list-style: none;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-light);
+      margin-bottom: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mob-comp-list li {
+      font-size: 0.86rem;
+      line-height: 1.45;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .mob-comp-list li strong {
+      color: var(--text-heading);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .mob-comp-list li span {
+      color: var(--text-body);
     }
 
     /* ════════════════════════════════════════════════════════════
@@ -1254,6 +1360,11 @@
       .footer-grid { grid-template-columns: 1fr; }
     }
 
+    @media (max-width: 768px) {
+      .table-container { display: none !important; }
+      .mobile-comparison-cards { display: flex !important; flex-direction: column; gap: 20px; }
+    }
+
     @media (max-width: 640px) {
       .sim-box { padding: 24px 18px; }
       .slider-value-box { font-size: 2.8rem; }
@@ -1261,6 +1372,19 @@
       .float-wa span { display: none; }
       .float-wa { padding: 14px; border-radius: 50%; }
       .top-bar { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .brand-logo-img { height: 36px; }
+      .navbar-inner { gap: 10px; }
+      .navbar-inner .btn { padding: 8px 14px; font-size: 0.82rem; }
+      .btn-text-full { display: none; }
+      .btn-text-mobile { display: inline; }
+    }
+
+    @media (min-width: 481px) {
+      .btn-text-full { display: inline; }
+      .btn-text-mobile { display: none; }
     }
   </style>
 </head>
@@ -1310,7 +1434,8 @@
 
       <div class="nav-cta-group">
         <a href="https://wa.me/5538998227582?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20engenharia%20da%20Enerel." target="_blank" rel="noopener noreferrer" class="btn btn-green">
-          Solicitar orçamento
+          <span class="btn-text-full">Solicitar orçamento</span>
+          <span class="btn-text-mobile">Orçamento</span>
         </a>
       </div>
     </div>
@@ -1996,6 +2121,102 @@
             </tr>
           </tbody>
         </table>
+      </div>
+
+      <!-- CARDS COMPARATIVOS VERTICAIS (APARECEM APENAS NO MOBILE, SEM SCROLL HORIZONTAL) -->
+      <div class="mobile-comparison-cards">
+        <!-- 1. Compre Seu Sistema Solar (Destaque Principal) -->
+        <div class="mob-comp-card highlight">
+          <div class="mob-comp-badge">⭐ Mais Vantajoso (Máxima Economia)</div>
+          <h3 class="mob-comp-title">Compre Seu Sistema Solar</h3>
+          <div class="mob-comp-highlight-val">Até 95% de corte na conta</div>
+          <p class="mob-comp-desc">Os painéis pertencem a você e valorizam seu imóvel. A parcela do financiamento substitui a conta da CEMIG.</p>
+          
+          <ul class="mob-comp-list">
+            <li>
+              <strong>Investimento Inicial:</strong>
+              <span>À vista ou Financiado (parcela substitui a fatura)</span>
+            </li>
+            <li>
+              <strong>Necessidade de Obras:</strong>
+              <span>Instalação padrão no telhado ou solo</span>
+            </li>
+            <li>
+              <strong>Patrimônio e Valorização:</strong>
+              <span class="tag-positive">Valoriza o imóvel e vira patrimônio seu</span>
+            </li>
+            <li>
+              <strong>Garantia de Desempenho:</strong>
+              <span class="tag-positive">25 Anos nos módulos fotovoltaicos</span>
+            </li>
+            <li>
+              <strong>Perfil Indicado:</strong>
+              <span>Casas próprias, galpões, fazendas e indústrias</span>
+            </li>
+          </ul>
+
+          <a href="#simulador" class="btn btn-green" style="width: 100%; text-align: center; justify-content: center;">
+            Simular Sistema Próprio
+          </a>
+        </div>
+
+        <!-- 2. Energia Solar por Assinatura -->
+        <div class="mob-comp-card">
+          <div class="mob-comp-badge badge-neutral">Sem Obras e Sem Investimento</div>
+          <h3 class="mob-comp-title">Energia Solar por Assinatura</h3>
+          <div class="mob-comp-highlight-val val-blue">Até 15% a 20% de desconto</div>
+          <p class="mob-comp-desc">Ideal para quem mora de aluguel ou não quer fazer obras. Desconto direto aplicado na sua fatura da CEMIG.</p>
+          
+          <ul class="mob-comp-list">
+            <li>
+              <strong>Investimento Inicial:</strong>
+              <span class="tag-positive">R$ 0,00 (zero custo de entrada)</span>
+            </li>
+            <li>
+              <strong>Necessidade de Obras:</strong>
+              <span class="tag-positive">Zero obras (adesão 100% digital)</span>
+            </li>
+            <li>
+              <strong>Patrimônio e Valorização:</strong>
+              <span>Economia mensal direta sem fidelidade</span>
+            </li>
+            <li>
+              <strong>Garantia de Desempenho:</strong>
+              <span>Créditos garantidos de usinas parceiras</span>
+            </li>
+            <li>
+              <strong>Perfil Indicado:</strong>
+              <span>Imóveis alugados, apartamentos e pequenos comércios</span>
+            </li>
+          </ul>
+
+          <a href="#simulador" class="btn btn-white" style="width: 100%; text-align: center; justify-content: center;">
+            Simular Assinatura
+          </a>
+        </div>
+
+        <!-- 3. CEMIG Tradicional -->
+        <div class="mob-comp-card card-muted">
+          <div class="mob-comp-badge badge-muted">Sem Enerel</div>
+          <h3 class="mob-comp-title">CEMIG Tradicional</h3>
+          <div class="mob-comp-highlight-val val-red">0% de Economia</div>
+          <p class="mob-comp-desc">Continuar pagando a tarifa cheia da distribuidora todos os meses sem nenhum benefício ou retorno.</p>
+          
+          <ul class="mob-comp-list">
+            <li>
+              <strong>Redução na Conta:</strong>
+              <span class="tag-negative">0% (sujeito a bandeiras e reajustes)</span>
+            </li>
+            <li>
+              <strong>Patrimônio:</strong>
+              <span class="tag-negative">Nenhum retorno financeiro</span>
+            </li>
+            <li>
+              <strong>Previsibilidade:</strong>
+              <span class="tag-negative">Sem proteção contra inflação energética</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
