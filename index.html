@@ -58,6 +58,72 @@
       --transition:     all 0.25s ease;
     }
 
+    /* ════════════════════════════════════════════════════════════
+       EFEITOS DE CARREGAMENTO & SCROLL REVEAL (SUAVES E MODERNOS)
+    ════════════════════════════════════════════════════════════ */
+    /* Animação de entrada imediata no carregamento do Hero */
+    .hero-text-content {
+      animation: heroContentFadeIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .hero-bg-photo img {
+      animation: heroPhotoFadeScale 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    @keyframes heroContentFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heroPhotoFadeScale {
+      from {
+        opacity: 0;
+        transform: scale(1.06);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Scroll reveal progressivo nas seções */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Efeito cascata para cards e elementos adjacentes */
+    .delay-1 { transition-delay: 0.10s; }
+    .delay-2 { transition-delay: 0.20s; }
+    .delay-3 { transition-delay: 0.30s; }
+    .delay-4 { transition-delay: 0.40s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      .hero-text-content, .hero-bg-photo img {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -384,9 +450,9 @@
        2. SEPARAÇÃO DOS PÚBLICOS (QUAL SOLUÇÃO VOCÊ PROCURA?)
     ════════════════════════════════════════════════════════════ */
     .pathways-section {
-      padding: 70px 0;
-      background: var(--bg-warm);
-      border-bottom: 1px solid var(--border-light);
+      padding: 85px 0;
+      background: #EFF6F1;
+      border-bottom: 1px solid #DCE9DF;
     }
 
     .pathways-header {
@@ -414,14 +480,14 @@
 
     .pathway-card {
       background: #FFFFFF;
-      border: 1px solid var(--border-light);
+      border: 1px solid #D7E5DC;
       border-radius: var(--radius-md);
       padding: 32px 26px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       transition: var(--transition);
-      box-shadow: var(--shadow-subtle);
+      box-shadow: 0 4px 16px rgba(7, 59, 30, 0.04);
     }
 
     .pathway-card:hover {
@@ -526,9 +592,9 @@
        4. ORGANIZAÇÃO DOS SERVIÇOS POR CATEGORIAS & EXPLICAÇÃO
     ════════════════════════════════════════════════════════════ */
     .services-categorized-section {
-      padding: 90px 0;
-      background: var(--bg-page);
-      border-bottom: 1px solid var(--border-light);
+      padding: 95px 0;
+      background: #F2F5F8;
+      border-bottom: 1px solid #E1E7ED;
     }
 
     .section-title-wrap {
@@ -765,16 +831,16 @@
        6. SIMULADOR DE ECONOMIA CEMIG (ESTIMATIVA TRANSPARENTE)
     ════════════════════════════════════════════════════════════ */
     .simulator-section {
-      padding: 90px 0;
-      background: var(--bg-warm);
-      border-bottom: 1px solid var(--border-light);
+      padding: 95px 0;
+      background: linear-gradient(180deg, #EAF5EE 0%, #F5FAF7 100%);
+      border-bottom: 1px solid #D2E9D9;
     }
 
     .sim-box {
       background: #FFFFFF;
       border-radius: var(--radius-lg);
-      border: 1px solid var(--border-light);
-      box-shadow: var(--shadow-card);
+      border: 1px solid #CFE5D6;
+      box-shadow: 0 16px 45px rgba(7, 59, 30, 0.08);
       padding: 44px;
       max-width: 1000px;
       margin: 0 auto;
@@ -1036,9 +1102,9 @@
        8. TABELA COMPARATIVA (DESKTOP) & CARDS (MOBILE)
     ════════════════════════════════════════════════════════════ */
     .comparison-section {
-      padding: 80px 0;
-      background: var(--bg-page);
-      border-bottom: 1px solid var(--border-light);
+      padding: 85px 0;
+      background: #F3F6F4;
+      border-bottom: 1px solid #DFE5E1;
     }
 
     .table-container {
@@ -1281,7 +1347,7 @@
 
     /* ── Footer ── */
     .footer {
-      background: #FFFFFF;
+      background: #F8FAFC;
       border-top: 1px solid var(--border-light);
       padding: 60px 0 30px;
       font-size: 0.9rem;
@@ -1527,7 +1593,7 @@
   ════════════════════════════════════════════════════════════ -->
   <section class="pathways-section" id="solucoes">
     <div class="container">
-      <div class="pathways-header">
+      <div class="pathways-header reveal">
         <span class="section-tag">Orientação Direta</span>
         <h2 class="pathways-title">Qual solução você está procurando?</h2>
         <p class="pathways-subtitle">
@@ -1537,7 +1603,7 @@
 
       <div class="pathways-grid">
         <!-- Caminho 1: Redução de Conta de Luz -->
-        <div class="pathway-card">
+        <div class="pathway-card reveal delay-1">
           <div>
             <span class="pathway-badge">Residencial & Comercial</span>
             <h3>Quero reduzir minha conta de luz</h3>
@@ -1551,7 +1617,7 @@
         </div>
 
         <!-- Caminho 2: Projetos para Empresa & Agro -->
-        <div class="pathway-card">
+        <div class="pathway-card reveal delay-2">
           <div>
             <span class="pathway-badge">Empresarial & Rural</span>
             <h3>Preciso de um projeto para minha empresa</h3>
@@ -1565,7 +1631,7 @@
         </div>
 
         <!-- Caminho 3: Engenharia Elétrica Especializada -->
-        <div class="pathway-card">
+        <div class="pathway-card reveal delay-3">
           <div>
             <span class="pathway-badge">Técnico & Industrial</span>
             <h3>Preciso de engenharia elétrica especializada</h3>
@@ -1588,7 +1654,7 @@
     <div class="container">
       <div class="pillars-grid">
         <!-- Comprometimento -->
-        <div class="pillar-card">
+        <div class="pillar-card reveal delay-1">
           <div class="pillar-icon-box">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
           </div>
@@ -1599,7 +1665,7 @@
         </div>
 
         <!-- Qualidade -->
-        <div class="pillar-card">
+        <div class="pillar-card reveal delay-2">
           <div class="pillar-icon-box">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
           </div>
@@ -1610,7 +1676,7 @@
         </div>
 
         <!-- Inovação -->
-        <div class="pillar-card">
+        <div class="pillar-card reveal delay-3">
           <div class="pillar-icon-box">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
           </div>
@@ -1628,7 +1694,7 @@
   ════════════════════════════════════════════════════════════ -->
   <section class="services-categorized-section" id="servicos">
     <div class="container">
-      <div class="section-title-wrap">
+      <div class="section-title-wrap reveal">
         <span class="section-tag">Capacidade Técnica Comprovada</span>
         <h2 class="section-title">Serviços Especializados de Engenharia</h2>
         <p class="section-subtitle">
@@ -1637,7 +1703,7 @@
       </div>
 
       <!-- Categoria 1: Energia Solar Fotovoltaica -->
-      <div class="service-category-block">
+      <div class="service-category-block reveal">
         <div class="category-header">
           <h3>1. Energia Solar Fotovoltaica</h3>
           <span>Microgeração, Minigeração & Homologação</span>
@@ -1707,7 +1773,7 @@
       </div>
 
       <!-- Categoria 2: Engenharia Elétrica & Média Tensão -->
-      <div class="service-category-block">
+      <div class="service-category-block reveal">
         <div class="category-header">
           <h3>2. Engenharia Elétrica & Média Tensão</h3>
           <span>Subestações, Proteção e Otimização Elétrica</span>
@@ -1777,7 +1843,7 @@
       </div>
 
       <!-- Categoria 3: Comissionamento, Ensaios & Eficiência -->
-      <div class="service-category-block">
+      <div class="service-category-block reveal">
         <div class="category-header">
           <h3>3. Comissionamento, Ensaios & Eficiência Energética</h3>
           <span>Testes de Campo, Laudos e Eliminação de Multas</span>
@@ -1853,7 +1919,7 @@
   ════════════════════════════════════════════════════════════ -->
   <section class="portfolio-section" id="projetos">
     <div class="container">
-      <div class="section-title-wrap">
+      <div class="section-title-wrap reveal">
         <span class="section-tag">Experiência Prática</span>
         <h2 class="section-title">Da residência à indústria, engenharia que entrega resultado</h2>
         <p class="section-subtitle">
@@ -1863,7 +1929,7 @@
 
       <div class="portfolio-grid">
         <!-- Residencial -->
-        <div class="portfolio-card">
+        <div class="portfolio-card reveal delay-1">
           <div class="portfolio-img-wrap">
             <img src="assets/familia-solar.webp" alt="Projeto solar residencial Enerel" />
           </div>
@@ -1882,7 +1948,7 @@
         </div>
 
         <!-- Comercial & Serviços -->
-        <div class="portfolio-card">
+        <div class="portfolio-card reveal delay-2">
           <div class="portfolio-img-wrap">
             <img src="assets/paineis-enerel.webp" alt="Instalação solar comercial Enerel" />
           </div>
@@ -1901,7 +1967,7 @@
         </div>
 
         <!-- Agro & Usinas -->
-        <div class="portfolio-card">
+        <div class="portfolio-card reveal delay-3">
           <div class="portfolio-img-wrap">
             <img src="assets/hero-solar.jpg" alt="Energia solar rural e usinas de solo" />
           </div>
@@ -1927,7 +1993,7 @@
   ════════════════════════════════════════════════════════════ -->
   <section class="simulator-section" id="simulador">
     <div class="container">
-      <div class="section-title-wrap">
+      <div class="section-title-wrap reveal">
         <span class="section-tag">Simulação de Retorno</span>
         <h2 class="section-title">Estime sua Economia na Fatura</h2>
         <p class="section-subtitle">
@@ -1935,7 +2001,7 @@
         </p>
       </div>
 
-      <div class="sim-box">
+      <div class="sim-box reveal">
         <div class="slider-area">
           <div class="slider-caption">Valor médio da sua fatura mensal atual:</div>
           <div class="slider-value-box">
@@ -2054,7 +2120,7 @@
   ════════════════════════════════════════════════════════════ -->
   <section class="trust-section" id="sobre">
     <div class="container">
-      <div class="section-title-wrap">
+      <div class="section-title-wrap reveal">
         <span class="section-tag">Transparência & Solidez</span>
         <h2 class="section-title">Engenharia Local de Confiança</h2>
         <p class="section-subtitle">
@@ -2063,22 +2129,22 @@
       </div>
 
       <div class="trust-grid">
-        <div class="trust-card">
+        <div class="trust-card reveal delay-1">
           <div class="trust-card-number">2020</div>
           <div class="trust-card-label">Ano de fundação da Enerel em Montes Claros - MG</div>
         </div>
 
-        <div class="trust-card">
+        <div class="trust-card reveal delay-2">
           <div class="trust-card-number">100%</div>
           <div class="trust-card-label">Projetos homologados conforme normas da CEMIG</div>
         </div>
 
-        <div class="trust-card">
+        <div class="trust-card reveal delay-3">
           <div class="trust-card-number">CREA-MG</div>
           <div class="trust-card-label">Responsabilidade técnica com emissão de ART</div>
         </div>
 
-        <div class="trust-card">
+        <div class="trust-card reveal delay-4">
           <div class="trust-card-number">25 Anos</div>
           <div class="trust-card-label">Garantia técnica de eficiência nos módulos solares</div>
         </div>
@@ -2091,7 +2157,7 @@
   ════════════════════════════════════════════════════════════ -->
   <section class="comparison-section">
     <div class="container">
-      <div class="section-title-wrap">
+      <div class="section-title-wrap reveal">
         <span class="section-tag">Comparativo Transparente</span>
         <h2 class="section-title">Qual modalidade faz mais sentido para você?</h2>
         <p class="section-subtitle">
@@ -2099,7 +2165,7 @@
         </p>
       </div>
 
-      <div class="table-container">
+      <div class="table-container reveal">
         <table class="clean-table">
           <thead>
             <tr>
@@ -2151,7 +2217,7 @@
       </div>
 
       <!-- CARDS COMPARATIVOS VERTICAIS (APARECEM APENAS NO MOBILE, SEM SCROLL HORIZONTAL) -->
-      <div class="mobile-comparison-cards">
+      <div class="mobile-comparison-cards reveal">
         <!-- 1. Compre Seu Sistema Solar (Destaque Principal) -->
         <div class="mob-comp-card highlight">
           <div class="mob-comp-badge">⭐ Mais Vantajoso (Máxima Economia)</div>
@@ -2253,12 +2319,12 @@
   ════════════════════════════════════════════════════════════ -->
   <section class="faq-section" id="faq">
     <div class="container faq-container">
-      <div class="section-title-wrap">
+      <div class="section-title-wrap reveal">
         <span class="section-tag">Esclarecimentos</span>
         <h2 class="section-title">Perguntas Frequentes</h2>
       </div>
 
-      <div class="faq-item open">
+      <div class="faq-item reveal open">
         <div class="faq-question">
           <span>Como funciona a energia solar por assinatura?</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -2268,7 +2334,7 @@
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item reveal">
         <div class="faq-question">
           <span>Como funciona o financiamento para compra do sistema próprio?</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -2278,7 +2344,7 @@
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item reveal">
         <div class="faq-question">
           <span>O que é estudo de proteção e parametrização de relés?</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -2288,7 +2354,7 @@
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item reveal">
         <div class="faq-question">
           <span>Qual a região de atendimento da Enerel?</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -2304,7 +2370,7 @@
        10. CTA FINAL REFINADO
   ════════════════════════════════════════════════════════════ -->
   <section class="cta-banner">
-    <div class="container cta-banner-content">
+    <div class="container cta-banner-content reveal">
       <h2>Precisa de uma solução energética para sua casa ou empresa?</h2>
       <p>Fale com a equipe da Enerel e receba uma orientação inicial para entender qual solução faz mais sentido para o seu consumo.</p>
       
@@ -2382,6 +2448,26 @@
   ════════════════════════════════════════════════════════════ -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Efeito de Entrada & Scroll Reveal com IntersectionObserver
+      const reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.08,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        reveals.forEach(el => revealObserver.observe(el));
+      } else {
+        reveals.forEach(el => el.classList.add('active'));
+      }
+
       // FAQ Accordion
       const faqItems = document.querySelectorAll('.faq-item');
       faqItems.forEach(item => {
