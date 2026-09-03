@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Enerel Energia Solar e Engenharia Elétrica — Projetos fotovoltaicos, geração compartilhada e soluções elétricas sob medida para residências, empresas, indústrias e agronegócio no Norte de Minas." />
+  <meta name="keywords" content="energia solar montes claros, engenharia eletrica montes claros, usina solar norte de minas, homologacao cemig, cabine primaria, estudos de protecao" />
+  
+  <meta property="og:title" content="Enerel — Energia Solar e Engenharia Elétrica em Montes Claros" />
+  <meta property="og:description" content="Projetos fotovoltaicos, geração compartilhada e engenharia elétrica especializada. Sede em Montes Claros e atuação no Norte de Minas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://enerel.com.br" />
+  
+  <title>Enerel | Energia Solar e Engenharia Elétrica — Montes Claros & Norte de Minas</title>
+
+  <!-- Typography: Outfit (Geométrica / Identidade Enerel) + Plus Jakarta Sans (Corpo Elegante) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="config.js"></script>
+
+  <style>
+    /* ════════════════════════════════════════════════════════════
+       DESIGN SYSTEM — ENEREL ENERGIA SOLAR & ENGENHARIA ELÉTRICA
+       Padrão: Verde Nobre + Verde Ação + Fundo Claro + Espaço Arejado
+    ════════════════════════════════════════════════════════════ */
+    :root {
+      --green-deep:     #073B1E;
+      --green-dark:     #0D532C;
+      --green-primary:  #168B41;
+      --green-action:   #1EAA55;
+      --green-soft:     #EBF7EE;
+      --green-tint:     #F3FAF5;
+      
+      --text-heading:   #0B1E13;
+      --text-body:      #334155;
+      --text-muted:     #64748B;
+      
+      --bg-white:       #FFFFFF;
+      --bg-page:        #F8FAF8;
+      --bg-warm:        #FBFDFB;
+      --border-light:   #E2E8F0;
+      --border-green:   #BBF7D0;
+      
+      --font-display:   'Outfit', -apple-system, sans-serif;
+      --font-text:      'Plus Jakarta Sans', -apple-system, sans-serif;
+      
+      --radius-sm:      6px;
+      --radius-md:      12px;
+      --radius-lg:      18px;
+      --radius-pill:    999px;
+      
+      --shadow-subtle:  0 2px 8px rgba(13, 83, 44, 0.05);
+      --shadow-card:    0 10px 30px rgba(13, 83, 44, 0.07);
+      --shadow-elevated: 0 16px 40px rgba(13, 83, 44, 0.10);
+      
+      --transition:     all 0.25s ease;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-body);
+      font-family: var(--font-text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      color: var(--text-heading);
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+    }
+
+    /* ── Top Utility Bar ── */
+    .top-bar {
+      background: var(--green-deep);
+      color: #E2F0D9;
+      font-size: 0.82rem;
+      padding: 8px 0;
+    }
+
+    .top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .top-bar-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .top-bar-links a {
+      color: #FFFFFF;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      transition: var(--transition);
+    }
+
+    .top-bar-links a:hover {
+      color: var(--green-action);
+    }
+
+    /* ── Main Navigation Header ── */
+    .navbar {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      height: 82px;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 28px;
+    }
+
+    .brand-logo-wrap {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .brand-logo-img {
+      height: 42px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex-shrink: 0;
+    }
+
+    .nav-links li {
+      white-space: nowrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1E293B;
+      font-weight: 600;
+      font-size: 0.92rem;
+      white-space: nowrap;
+      transition: var(--transition);
+      padding: 6px 0;
+      display: inline-block;
+    }
+
+    .nav-links a:hover {
+      color: var(--green-primary);
+    }
+
+    .nav-cta-group {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 24px;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: var(--transition);
+      border: 1px solid transparent;
+      white-space: nowrap;
+      line-height: 1.2;
+    }
+
+    .btn-green {
+      background: var(--green-primary);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(22, 139, 65, 0.22);
+    }
+
+    .btn-green:hover {
+      background: var(--green-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(22, 139, 65, 0.32);
+    }
+
+    .btn-white {
+      background: #FFFFFF;
+      color: var(--green-deep);
+      border: 1px solid var(--border-light);
+    }
+
+    .btn-white:hover {
+      background: var(--green-soft);
+      border-color: var(--border-green);
+    }
+
+    .btn-outline-wa {
+      background: #FFFFFF;
+      color: var(--green-deep);
+      border: 1px solid #CBD5E1;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-outline-wa:hover {
+      border-color: #25D366;
+      background: #F0FDF4;
+    }
+
+    .wa-status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #25D366;
+      display: inline-block;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       1. HERO SECTION (REFERÊNCIA CORDEIRO: PLACAS VISÍVEIS + FADE COMPACTO)
+    ════════════════════════════════════════════════════════════ */
+    .hero-solar {
+      position: relative;
+      background: #FFFFFF;
+      min-height: 590px;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+    }
+
+    /* Imagem fotográfica com foco real nos painéis solares */
+    .hero-bg-photo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-bg-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 70% 85%; /* Foca nas placas solares sem mostrar excesso de céu */
+      display: block;
+    }
+
+    /* Fade horizontal compacto e suave (estilo Cordeiro Energia) */
+    .hero-bg-fade {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        #FFFFFF 0%,
+        #FFFFFF 8%,
+        rgba(255, 255, 255, 0.90) 22%,
+        rgba(255, 255, 255, 0.45) 36%,
+        rgba(255, 255, 255, 0) 54%
+      );
+    }
+
+    .hero-content-relative {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .hero-text-content {
+      max-width: 600px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      color: var(--green-primary);
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-size: clamp(2.3rem, 4vw, 3.4rem);
+      font-weight: 800;
+      color: var(--green-deep);
+      margin-bottom: 18px;
+      line-height: 1.14;
+    }
+
+    .hero-subtitle {
+      font-size: 1.08rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 30px;
+      max-width: 560px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    /* 3 diferenciais objetivos */
+    .hero-guarantees {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-light);
+      font-size: 0.90rem;
+      color: var(--text-heading);
+      font-weight: 600;
+    }
+
+    .hero-guarantees div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-guarantees svg {
+      color: var(--green-primary);
+      flex-shrink: 0;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       2. SEPARAÇÃO DOS PÚBLICOS (QUAL SOLUÇÃO VOCÊ PROCURA?)
+    ════════════════════════════════════════════════════════════ */
+    .pathways-section {
+      padding: 70px 0;
+      background: var(--bg-warm);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .pathways-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 44px;
+    }
+
+    .pathways-title {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--green-deep);
+      margin-bottom: 10px;
+    }
+
+    .pathways-subtitle {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+    }
+
+    .pathways-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .pathway-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 32px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .pathway-card:hover {
+      border-color: var(--border-green);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .pathway-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 16px;
+      background: var(--green-soft);
+      color: var(--green-dark);
+    }
+
+    .pathway-card h3 {
+      font-size: 1.3rem;
+      color: var(--green-deep);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .pathway-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .pathway-action-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--green-primary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .pathway-action-link:hover {
+      color: var(--green-deep);
+      gap: 10px;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       3. NOSSOS PILARES — ELEGANTE, LEVE E CONCRETO
+    ════════════════════════════════════════════════════════════ */
+    .pillars-section {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border-light);
+      padding: 50px 0;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .pillar-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .pillar-icon-box {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      background: var(--green-soft);
+      border: 1px solid var(--border-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green-primary);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .pillar-content h3 {
+      font-size: 1.15rem;
+      color: var(--green-deep);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .pillar-content p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       4. ORGANIZAÇÃO DOS SERVIÇOS POR CATEGORIAS & EXPLICAÇÃO
+    ════════════════════════════════════════════════════════════ */
+    .services-categorized-section {
+      padding: 90px 0;
+      background: var(--bg-page);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .section-title-wrap {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 50px;
+    }
+
+    .section-tag {
+      color: var(--green-primary);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.2vw, 2.7rem);
+      color: var(--green-deep);
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    .service-category-block {
+      margin-bottom: 50px;
+    }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border-green);
+    }
+
+    .category-header h3 {
+      font-size: 1.45rem;
+      color: var(--green-deep);
+      font-weight: 700;
+    }
+
+    .category-header span {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .category-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .category-cards-grid.two-cols {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tech-service-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .tech-service-card:hover {
+      border-color: var(--border-green);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .tech-card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .tech-card-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--green-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green-primary);
+      flex-shrink: 0;
+    }
+
+    .tech-card-header h4 {
+      font-size: 1.1rem;
+      color: var(--green-deep);
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .tech-card-problem {
+      font-size: 0.88rem;
+      color: var(--text-body);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .tech-card-meta {
+      background: var(--bg-page);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    .tech-card-meta strong {
+      color: var(--green-dark);
+    }
+
+    .tech-card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--green-primary);
+      text-decoration: none;
+    }
+
+    .tech-card-cta:hover {
+      color: var(--green-deep);
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       5. PROJETOS EXECUTADOS — DA RESIDÊNCIA À INDÚSTRIA
+    ════════════════════════════════════════════════════════════ */
+    .portfolio-section {
+      padding: 90px 0;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .portfolio-card {
+      background: var(--bg-page);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+      border-color: var(--border-green);
+    }
+
+    .portfolio-img-wrap {
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .portfolio-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .portfolio-card:hover .portfolio-img-wrap img {
+      transform: scale(1.04);
+    }
+
+    .portfolio-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .portfolio-segment-tag {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--green-primary);
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .portfolio-title {
+      font-size: 1.3rem;
+      color: var(--green-deep);
+      margin-bottom: 8px;
+    }
+
+    .portfolio-desc {
+      font-size: 0.90rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .portfolio-benefit {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       6. SIMULADOR DE ECONOMIA CEMIG (ESTIMATIVA TRANSPARENTE)
+    ════════════════════════════════════════════════════════════ */
+    .simulator-section {
+      padding: 90px 0;
+      background: var(--bg-warm);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .sim-box {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-card);
+      padding: 44px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .slider-area {
+      text-align: center;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--border-light);
+      margin-bottom: 36px;
+    }
+
+    .slider-caption {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .slider-value-box {
+      font-family: var(--font-display);
+      font-size: 3.4rem;
+      font-weight: 800;
+      color: var(--green-deep);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .slider-value-box small {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .range-slider-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 10px;
+      border-radius: 5px;
+      background: #E2E8F0;
+      outline: none;
+      cursor: pointer;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--green-primary);
+      border: 4px solid #FFFFFF;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+
+    input[type="range"]::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+      background: var(--green-dark);
+    }
+
+    .range-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .option-card {
+      background: var(--bg-page);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+
+    .option-card.highlight {
+      border: 2px solid var(--green-primary);
+      background: var(--green-tint);
+    }
+
+    .option-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 10px;
+    }
+
+    .option-card.highlight .option-badge {
+      background: var(--green-primary);
+      color: #FFFFFF;
+    }
+
+    .option-card:not(.highlight) .option-badge {
+      background: #E2E8F0;
+      color: var(--text-body);
+    }
+
+    .option-title {
+      font-size: 1.35rem;
+      color: var(--green-deep);
+      margin-bottom: 6px;
+    }
+
+    .option-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .numbers-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 18px;
+      margin: 18px 0;
+    }
+
+    .number-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 8px 0;
+      border-bottom: 1px solid #F1F5F9;
+    }
+
+    .number-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .number-row .label {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .number-row .val {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-heading);
+    }
+
+    .number-row .val.green-bold {
+      font-size: 1.55rem;
+      color: var(--green-primary);
+      font-weight: 800;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin-bottom: 22px;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--text-body);
+      margin-bottom: 8px;
+    }
+
+    .feature-list li svg {
+      color: var(--green-primary);
+      flex-shrink: 0;
+    }
+
+    /* Disclaimer transparente */
+    .sim-disclaimer {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-light);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       7. PROVAS & CREDIBILIDADE CONFIRMADA
+    ════════════════════════════════════════════════════════════ */
+    .trust-section {
+      padding: 80px 0;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .trust-card {
+      padding: 24px;
+      border-radius: var(--radius-md);
+      background: var(--bg-page);
+      border: 1px solid var(--border-light);
+      text-align: center;
+    }
+
+    .trust-card-number {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--green-deep);
+      margin-bottom: 6px;
+    }
+
+    .trust-card-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+      font-weight: 600;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       8. TABELA COMPARATIVA
+    ════════════════════════════════════════════════════════════ */
+    .comparison-section {
+      padding: 80px 0;
+      background: var(--bg-page);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .table-container {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-subtle);
+      overflow-x: auto;
+    }
+
+    .clean-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    .clean-table th, .clean-table td {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 0.92rem;
+    }
+
+    .clean-table th {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      background: #F8FAFC;
+      color: var(--text-heading);
+    }
+
+    .clean-table th.col-highlight {
+      background: var(--green-soft);
+      color: var(--green-dark);
+      border-top: 3px solid var(--green-primary);
+    }
+
+    .clean-table td.col-highlight {
+      background: #FAFDFB;
+      font-weight: 600;
+      color: var(--green-deep);
+    }
+
+    .tag-negative {
+      color: #DC2626;
+      font-weight: 600;
+    }
+
+    .tag-positive {
+      color: var(--green-primary);
+      font-weight: 700;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       9. DÚVIDAS FREQUENTES (FAQ)
+    ════════════════════════════════════════════════════════════ */
+    .faq-section {
+      padding: 80px 0;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border-light);
+      padding: 20px 0;
+    }
+
+    .faq-question {
+      font-family: var(--font-display);
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--green-deep);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    .faq-question svg {
+      color: var(--green-primary);
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .faq-item.open .faq-question svg {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      padding-top: 12px;
+      display: none;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       10. CTA BANNER FINAL REFINADO
+    ════════════════════════════════════════════════════════════ */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-dark) 100%);
+      color: #FFFFFF;
+      padding: 70px 0;
+      text-align: center;
+    }
+
+    .cta-banner-content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .cta-banner h2 {
+      color: #FFFFFF;
+      font-size: clamp(2rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .cta-banner p {
+      color: rgba(255, 255, 255, 0.90);
+      font-size: 1.12rem;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      background: #FFFFFF;
+      border-top: 1px solid var(--border-light);
+      padding: 60px 0 30px;
+      font-size: 0.9rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand p {
+      margin-top: 14px;
+      color: var(--text-muted);
+      max-width: 380px;
+      line-height: 1.6;
+    }
+
+    .footer-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 16px;
+    }
+
+    .footer-contact-list {
+      list-style: none;
+    }
+
+    .footer-contact-list li {
+      margin-bottom: 10px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-contact-list li a {
+      color: var(--green-dark);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-light);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* ── Floating WhatsApp ── */
+    .float-wa {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 99;
+      background: #25D366;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.92rem;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+      transition: var(--transition);
+    }
+
+    .float-wa:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.55);
+    }
+
+    /* ── Responsiveness ── */
+    @media (max-width: 992px) {
+      .nav-links { display: none; }
+      .hero-solar { min-height: auto; }
+      .hero-bg-photo { width: 100%; opacity: 0.20; }
+      .hero-bg-fade { background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, #FFFFFF 100%); }
+      .pathways-grid { grid-template-columns: 1fr; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      .category-cards-grid { grid-template-columns: 1fr; }
+      .category-cards-grid.two-cols { grid-template-columns: 1fr; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .options-grid { grid-template-columns: 1fr; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .sim-box { padding: 24px 18px; }
+      .slider-value-box { font-size: 2.8rem; }
+      .trust-grid { grid-template-columns: 1fr; }
+      .float-wa span { display: none; }
+      .float-wa { padding: 14px; border-radius: 50%; }
+      .top-bar { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════════════════════
+       BARRA DE CONTATO SUPERIOR (MONTES CLAROS & NORTE DE MINAS)
+  ════════════════════════════════════════════════════════════ -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div>
+        <span>📍 Av. Dulce Sarmento, 2126 - Esplanada, Montes Claros - MG</span>
+      </div>
+      <div class="top-bar-links">
+        <a href="tel:3832120961">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          (38) 3212-0961
+        </a>
+        <a href="https://wa.me/5538998227582" target="_blank" rel="noopener noreferrer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          (38) 9 9822-7582
+        </a>
+        <a href="https://www.instagram.com/enerelenergiasolar/" target="_blank" rel="noopener noreferrer">
+          Instagram @enerelenergiasolar
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════
+       NAVBAR (LOGO + 5 LINKS LIMPOS + PEDIR ORÇAMENTO)
+  ════════════════════════════════════════════════════════════ -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="#" class="brand-logo-wrap">
+        <img src="assets/logo-enerel.png" alt="Enerel Energia Solar e Engenharia Elétrica" class="brand-logo-img" />
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#solucoes">Soluções</a></li>
+        <li><a href="#servicos">Serviços Técnicos</a></li>
+        <li><a href="#simulador">Simulador CEMIG</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#sobre">A Enerel</a></li>
+        <li><a href="#faq">Dúvidas</a></li>
+      </ul>
+
+      <div class="nav-cta-group">
+        <a href="https://wa.me/5538998227582?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20engenharia%20da%20Enerel." target="_blank" rel="noopener noreferrer" class="btn btn-green">
+          Solicitar orçamento
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════════════════════════
+       1. HERO (FOTOGRAFIA SOLAR EM DESTAQUE + FADE SUAVE ESTILO CORDEIRO)
+  ════════════════════════════════════════════════════════════ -->
+  <section class="hero-solar">
+    <!-- Imagem fotográfica com foco real nas placas solares instaladas -->
+    <div class="hero-bg-photo">
+      <img src="assets/hero-solar.jpg" alt="Instalação de usina solar fotovoltaica Enerel" />
+      <div class="hero-bg-fade"></div>
+    </div>
+
+    <!-- Conteúdo com boa utilização de espaço em branco à esquerda -->
+    <div class="container hero-content-relative">
+      <div class="hero-text-content">
+        <div class="hero-tag">
+          Engenharia Fotovoltaica & Soluções Elétricas no Norte de Minas
+        </div>
+        
+        <h1 class="hero-title">
+          Energia solar e engenharia elétrica para gerar mais economia e segurança.
+        </h1>
+
+        <p class="hero-subtitle">
+          Projetos fotovoltaicos, geração compartilhada e soluções elétricas sob medida para residências, empresas, indústrias e agronegócios no Norte de Minas.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#simulador" class="btn btn-green">
+            Calcular minha economia
+          </a>
+          <a href="https://wa.me/5538998227582?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20Enerel%20sobre%20energia%20solar%20e%20engenharia." target="_blank" rel="noopener noreferrer" class="btn btn-outline-wa">
+            <span class="wa-status-dot"></span>
+            Falar com um especialista
+          </a>
+        </div>
+
+        <!-- 3 diferenciais objetivos sem poluição -->
+        <div class="hero-guarantees">
+          <div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Engenharia especializada com responsável técnico</span>
+          </div>
+          <div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Atendimento local e suporte em Montes Claros</span>
+          </div>
+          <div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Projetos homologados com conexão segura à CEMIG</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       2. SEPARAÇÃO DOS PÚBLICOS (QUAL SOLUÇÃO VOCÊ ESTÁ PROCURANDO?)
+  ════════════════════════════════════════════════════════════ -->
+  <section class="pathways-section" id="solucoes">
+    <div class="container">
+      <div class="pathways-header">
+        <span class="section-tag">Orientação Direta</span>
+        <h2 class="pathways-title">Qual solução você está procurando?</h2>
+        <p class="pathways-subtitle">
+          Escolha o caminho adequado para a sua necessidade e veja a solução sob medida:
+        </p>
+      </div>
+
+      <div class="pathways-grid">
+        <!-- Caminho 1: Redução de Conta de Luz -->
+        <div class="pathway-card">
+          <div>
+            <span class="pathway-badge">Residencial & Comercial</span>
+            <h3>Quero reduzir minha conta de luz</h3>
+            <p>
+              Para quem quer parar de ser refém das tarifas da CEMIG. Instale seu próprio sistema solar com corte de até 95% ou assine energia solar sem nenhuma obra.
+            </p>
+          </div>
+          <a href="#simulador" class="pathway-action-link">
+            Simular Minha Economia ➔
+          </a>
+        </div>
+
+        <!-- Caminho 2: Projetos para Empresa & Agro -->
+        <div class="pathway-card">
+          <div>
+            <span class="pathway-badge">Empresarial & Rural</span>
+            <h3>Preciso de um projeto para minha empresa</h3>
+            <p>
+              Para padarias, supermercados, clínicas, galpões e produtores rurais. Usinas de solo ou telhado para diminuir custos fixos e gerar retorno real de caixa.
+            </p>
+          </div>
+          <a href="#projetos" class="pathway-action-link">
+            Ver Projetos Empresariais ➔
+          </a>
+        </div>
+
+        <!-- Caminho 3: Engenharia Elétrica Especializada -->
+        <div class="pathway-card">
+          <div>
+            <span class="pathway-badge">Técnico & Industrial</span>
+            <h3>Preciso de engenharia elétrica especializada</h3>
+            <p>
+              Para indústrias, usinas solares e grandes consumidores. Subestações, cabines primárias, estudos de proteção, parametrização e comissionamento.
+            </p>
+          </div>
+          <a href="#servicos" class="pathway-action-link">
+            Consultar Serviços de Engenharia ➔
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       3. NOSSOS PILARES — ELEGANTES, LEVES E CONCRETOS
+  ════════════════════════════════════════════════════════════ -->
+  <section class="pillars-section">
+    <div class="container">
+      <div class="pillars-grid">
+        <!-- Comprometimento -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <div class="pillar-content">
+            <h3>Comprometimento</h3>
+            <p>Acompanhamento próximo de cada etapa, desde a análise preliminar da fatura até a vistoria final da CEMIG.</p>
+          </div>
+        </div>
+
+        <!-- Qualidade -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <div class="pillar-content">
+            <h3>Qualidade</h3>
+            <p>Projetos executados com equipamentos certificados de padrão mundial e rigoroso cumprimento das normas ABNT.</p>
+          </div>
+        </div>
+
+        <!-- Inovação -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </div>
+          <div class="pillar-content">
+            <h3>Inovação</h3>
+            <p>Integração de microgeração, minigeração e geração compartilhada para levar energia limpa a qualquer perfil de cliente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       4. SERVIÇOS TÉCNICOS ORGANIZADOS POR CATEGORIA & COM EXPLICAÇÃO
+  ════════════════════════════════════════════════════════════ -->
+  <section class="services-categorized-section" id="servicos">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Capacidade Técnica Comprovada</span>
+        <h2 class="section-title">Serviços Especializados de Engenharia</h2>
+        <p class="section-subtitle">
+          Soluções explicadas de forma clara para quem busca geração solar ou precisa de engenharia elétrica de alta precisão:
+        </p>
+      </div>
+
+      <!-- Categoria 1: Energia Solar Fotovoltaica -->
+      <div class="service-category-block">
+        <div class="category-header">
+          <h3>1. Energia Solar Fotovoltaica</h3>
+          <span>Microgeração, Minigeração & Homologação</span>
+        </div>
+
+        <div class="category-cards-grid">
+          <!-- Microgeração -->
+          <div class="tech-service-card">
+            <div>
+              <div class="tech-card-header">
+                <div class="tech-card-icon">☀️</div>
+                <h4>Microgeração (Residencial & Comercial)</h4>
+              </div>
+              <p class="tech-card-problem">
+                Instalação de painéis no telhado ou solo para residências e empresas gerarem sua própria energia, reduzindo até 95% do boleto da CEMIG.
+              </p>
+              <div class="tech-card-meta">
+                <strong>Para quem:</strong> Casas, comércios, clínicas e pequenos negócios.<br />
+                <strong>Benefício:</strong> Economia imediata e proteção contra aumentos tarifários.
+              </div>
+            </div>
+            <a href="https://wa.me/5538998227582?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20microgera%C3%A7%C3%A3o%20solar%20para%20minha%20resid%C3%AAncia/empresa." target="_blank" rel="noopener noreferrer" class="tech-card-cta">
+              Solicitar Orçamento ➔
+            </a>
+          </div>
+
+          <!-- Minigeração -->
+          <div class="tech-service-card">
+            <div>
+              <div class="tech-card-header">
+                <div class="tech-card-icon">⚡</div>
+                <h4>Minigeração Distribuída & Usinas</h4>
+              </div>
+              <p class="tech-card-problem">
+                Projetos e construção de usinas solares de maior potência (acima de 75 kW até 5 MW), dimensionadas para indústrias, fazendas ou investidores.
+              </p>
+              <div class="tech-card-meta">
+                <strong>Para quem:</strong> Indústrias, agronegócio e investidores de usinas.<br />
+                <strong>Benefício:</strong> Alta escala de economia e retorno atrativo sobre o capital.
+              </div>
+            </div>
+            <a href="https://wa.me/5538998227582?text=Ol%C3%A1!%20Tenho%20interesse%20em%20projetos%20de%20minigera%C3%A7%C3%A3o/usina%20solar." target="_blank" rel="noopener noreferrer" class="tech-card-cta">
+              Consultar Engenharia ➔
+            </a>
+          </div>
+
+          <!-- Homologação CEMIG -->
+          <div class="tech-service-card">
+            <div>
+              <div class="tech-card-header">
+                <div class="tech-card-icon">📋</div>
+                <h4>Homologação & Parecer CEMIG</h4>
+              </div>
+              <p class="tech-card-problem">
+                Cuidamos de toda a documentação, ART, projeto elétrico e trâmites técnicos para aprovação ágil e conexão segura junto à CEMIG.
+              </p>
+              <div class="tech-card-meta">
+                <strong>Para quem:</strong> Clientes com projetos solares ou regularizações pendentes.<br />
+                <strong>Benefício:</strong> Sem dor de cabeça com burocracia técnica.
+              </div>
+            </div>
+            <a href="https://wa.me/5538998227582?text=Ol%C3%A1!%20Preciso%20de%20homologa%C3%A7%C3%A3o%20e%20parecer%20de%20acesso%20junto%20%C3%A0%20Cemig." target="_blank" rel="noopener noreferrer" class="tech-card-cta">
+              Tirar Dúvidas de Homologação ➔
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categoria 2: Engenharia Elétrica & Média Tensão -->
+      <div class="service-category-block">
+        <div class="category-header">
+          <h3>2. Engenharia Elétrica & Média Tensão</h3>
+          <span>Subestações, Proteção e Otimização Elétrica</span>
+        </div>
+
+        <div class="category-cards-grid">
+          <!-- Cabines Primárias -->
+          <div class="tech-service-card">
+            <div>
+              <div class="tech-card-header">
+                <div class="tech-card-icon">🏢</div>
+                <h4>Projetos de Cabines Primárias</h4>
+              </div>
+              <p class="tech-card-problem">
+                Subestações de média tensão (13.8kV) para empresas e usinas solares que necessitam de conexão robusta e homologada na CEMIG.
+              </p>
+              <div class="tech-card-meta">
+                <strong>Para quem:</strong> Grandes comércios, indústrias e usinas.<br />
+                <strong>Benefício:</strong> Fornecimento estável e tarifação em média tensão.
+              </div>
+            </div>
+            <a href="https://wa.me/5538998227582?text=Ol%C3%A1!%20Preciso%20de%20projeto%20de%20cabine%20prim%C3%A1ria/subesta%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="tech-card-cta">
+              Falar com Engenheiro ➔
+            </a>
+          </div>
+
+          <!-- Estudos de Proteção -->
+          <div class="tech-service-card">
+            <div>
+              <div class="tech-card-header">
+                <div class="tech-card-icon">📈</div>
+                <h4>Estudos de Proteção Elétrica</h4>
+              </div>
+              <p class="tech-card-problem">
+                Estudo técnico de coordenação e seletividade que impede que uma sobrecarga ou curto-circuito isolado desligue toda a sua instalação.
+              </p>
+              <div class="tech-card-meta">
+                <strong>Para quem:</strong> Instalações industriais, comerciais e usinas.<br />
+                <strong>Benefício:</strong> Segurança operacional e exigência da concessionária.
+              </div>
+            </div>
+            <a href="https://wa.me/5538998227582?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20estudo%20de%20prote%C3%A7%C3%A3o%20el%C3%A9trica." target="_blank" rel="noopener noreferrer" class="tech-card-cta">
+              Solicitar Estudo ➔
+            </a>
+          </div>
+
+          <!-- Parametrização de Relés -->
+          <div class="tech-service-card">
+            <div>
+              <div class="tech-card-header">
+                <div class="tech-card-icon">⚙️</div>
+                <h4>Parametrização de Relés</h4>
+              </div>
+              <p class="tech-card-problem">
+                Configuração e ajuste fino dos relés eletrônicos de proteção que desarmam disjuntores em milissegundos diante de anomalias elétricas.
+              </p>
+              <div class="tech-card-meta">
+                <strong>Para quem:</strong> Cabines primárias e subestações de usinas e fábricas.<br />
+                <strong>Benefício:</strong> Proteção de transformadores caros contra queimas.
+              </div>
+            </div>
+            <a href="https://wa.me/5538998227582?text=Ol%C3%A1!%20Preciso%20de%20parametriza%C3%A7%C3%A3o%20de%20rel%C3%A9s%20de%20prote%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="tech-card-cta">
+              Consultar Serviço ➔
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categoria 3: Comissionamento, Ensaios & Eficiência -->
+      <div class="service-category-block">
+        <div class="category-header">
+          <h3>3. Comissionamento, Ensaios & Eficiência Energética</h3>
+          <span>Testes de Campo, Laudos e Eliminação de Multas</span>
+        </div>
+
+        <div class="category-cards-grid">
+          <!-- Correção Fator Potência -->
+          <div class="tech-service-card">
+            <div>
+              <div class="tech-card-header">
+                <div class="tech-card-icon">📉</div>
+                <h4>Correção de Fator de Potência</h4>
+              </div>
+              <p class="tech-card-problem">
+                Medição de energia reativa excedente e instalação de bancos de capacitores para zerar as multas pesadas cobradas na fatura da CEMIG.
+              </p>
+              <div class="tech-card-meta">
+                <strong>Para quem:</strong> Empresas com motores, compressores e maquinário pesado.<br />
+                <strong>Benefício:</strong> Eliminação imediata de multas na conta de luz.
+              </div>
+            </div>
+            <a href="https://wa.me/5538998227582?text=Ol%C3%A1!%20Minha%20empresa%20est%C3%A1%20pagando%20multa%20de%20energia%20reativa/fator%20de%20pot%C3%AAncia." target="_blank" rel="noopener noreferrer" class="tech-card-cta">
+              Zerar Multas ➔
+            </a>
+          </div>
+
+          <!-- Comissionamento e Ensaios -->
+          <div class="tech-service-card">
+            <div>
+              <div class="tech-card-header">
+                <div class="tech-card-icon">🔍</div>
+                <h4>Comissionamento & Ensaios Elétricos</h4>
+              </div>
+              <p class="tech-card-problem">
+                Testes práticos de validação antes da energização de usinas e subestações, além de ensaios em transformadores, disjuntores e para-raios.
+              </p>
+              <div class="tech-card-meta">
+                <strong>Para quem:</strong> Usinas fotovoltaicas e instalações elétricas corporativas.<br />
+                <strong>Benefício:</strong> Garantia de que tudo opera na potência correta com segurança.
+              </div>
+            </div>
+            <a href="https://wa.me/5538998227582?text=Ol%C3%A1!%20Preciso%20de%20comissionamento/ensaios%20el%C3%A9tricos%20para%20uma%20instala%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="tech-card-cta">
+              Solicitar Ensaios ➔
+            </a>
+          </div>
+
+          <!-- Laudo ICMS -->
+          <div class="tech-service-card">
+            <div>
+              <div class="tech-card-header">
+                <div class="tech-card-icon">📑</div>
+                <h4>Laudo para Restituição de ICMS</h4>
+              </div>
+              <p class="tech-card-problem">
+                Laudo pericial elétrico que comprova o percentual exato de energia usado na linha de produção, permitindo creditar o ICMS da fatura.
+              </p>
+              <div class="tech-card-meta">
+                <strong>Para quem:</strong> Indústrias de transformação e agronegócio produtivo.<br />
+                <strong>Benefício:</strong> Recuperação financeira direta no fluxo de caixa.
+              </div>
+            </div>
+            <a href="https://wa.me/5538998227582?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20laudo%20de%20restitui%C3%A7%C3%A3o%20de%20ICMS." target="_blank" rel="noopener noreferrer" class="tech-card-cta">
+              Falar sobre Laudo ICMS ➔
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       5. PROJETOS PENSADOS PARA CADA REALIDADE
+  ════════════════════════════════════════════════════════════ -->
+  <section class="portfolio-section" id="projetos">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Experiência Prática</span>
+        <h2 class="section-title">Da residência à indústria, engenharia que entrega resultado</h2>
+        <p class="section-subtitle">
+          Soluções dimensionadas respeitando as particularidades técnicas e financeiras de cada cliente no Norte de Minas:
+        </p>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- Residencial -->
+        <div class="portfolio-card">
+          <div class="portfolio-img-wrap">
+            <img src="assets/familia-solar.webp" alt="Projeto solar residencial Enerel" />
+          </div>
+          <div class="portfolio-content">
+            <div>
+              <div class="portfolio-segment-tag">Residências & Famílias</div>
+              <h3 class="portfolio-title">Conforto Térmico Sem Medo da Conta</h3>
+              <p class="portfolio-desc">
+                Sistemas dimensionados para permitir o uso contínuo de ar-condicionado e eletrodomésticos, reduzindo até 95% do boleto da CEMIG com garantia de 25 anos.
+              </p>
+            </div>
+            <div class="portfolio-benefit">
+              <span>✓ Proteção do orçamento familiar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comercial & Serviços -->
+        <div class="portfolio-card">
+          <div class="portfolio-img-wrap">
+            <img src="assets/paineis-enerel.webp" alt="Instalação solar comercial Enerel" />
+          </div>
+          <div class="portfolio-content">
+            <div>
+              <div class="portfolio-segment-tag">Comércio & Serviços</div>
+              <h3 class="portfolio-title">Redução de Custos Fixos</h3>
+              <p class="portfolio-desc">
+                Soluções para supermercados, padarias, clínicas e escritórios que transformam uma despesa recorrente da CEMIG em margem líquida direta de operação.
+              </p>
+            </div>
+            <div class="portfolio-benefit">
+              <span>✓ Aumento imediato de rentabilidade</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agro & Usinas -->
+        <div class="portfolio-card">
+          <div class="portfolio-img-wrap">
+            <img src="assets/hero-solar.jpg" alt="Energia solar rural e usinas de solo" />
+          </div>
+          <div class="portfolio-content">
+            <div>
+              <div class="portfolio-segment-tag">Agronegócio & Indústria</div>
+              <h3 class="portfolio-title">Autonomia e Engenharia Pesada</h3>
+              <p class="portfolio-desc">
+                Usinas de solo para pivôs de irrigação, poços artesianos e subestações em média tensão com homologação técnica assegurada junto à concessionária.
+              </p>
+            </div>
+            <div class="portfolio-benefit">
+              <span>✓ Robustez técnica e alto rendimento</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       6. SIMULADOR DE ECONOMIA CEMIG (ESTIMATIVA TRANSPARENTE)
+  ════════════════════════════════════════════════════════════ -->
+  <section class="simulator-section" id="simulador">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Simulação de Retorno</span>
+        <h2 class="section-title">Estime sua Economia na Fatura</h2>
+        <p class="section-subtitle">
+          Arraste a barra para o valor médio da sua conta de energia da CEMIG e veja uma estimativa inicial:
+        </p>
+      </div>
+
+      <div class="sim-box">
+        <div class="slider-area">
+          <div class="slider-caption">Valor médio da sua fatura mensal atual:</div>
+          <div class="slider-value-box">
+            <span id="slider-display">R$ 1.200</span>
+            <small>/mês</small>
+          </div>
+
+          <div class="range-slider-wrap">
+            <input type="range" id="range-input" min="300" max="15000" step="50" value="1200" />
+            <div class="range-labels">
+              <span>R$ 300</span>
+              <span>R$ 3.000</span>
+              <span>R$ 7.500</span>
+              <span>R$ 15.000+</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="options-grid">
+          <!-- Opção 1: Compre Seu Sistema Solar -->
+          <div class="option-card highlight">
+            <div>
+              <span class="option-badge">Modalidade 1: Sistema Fotovoltaico Próprio</span>
+              <h3 class="option-title">Compra do Sistema Solar</h3>
+              <p class="option-desc">Os painéis pertencem a você e ficam instalados no seu telhado ou terreno.</p>
+
+              <div class="numbers-box">
+                <div class="number-row">
+                  <span class="label">Nova fatura estimada (taxa básica):</span>
+                  <span class="val" id="val-new-proprio">R$ 95</span>
+                </div>
+                <div class="number-row">
+                  <span class="label">Economia mensal estimada:</span>
+                  <span class="val green-bold" id="val-save-proprio">R$ 1.105</span>
+                </div>
+                <div class="number-row">
+                  <span class="label">Economia estimada em 1 ano:</span>
+                  <span class="val" id="val-year-proprio">R$ 13.260</span>
+                </div>
+              </div>
+
+              <ul class="feature-list">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Redução de até 95% na conta de luz
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Financiamento onde a parcela substitui a conta da CEMIG
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Garantia de 25 anos de eficiência nos módulos
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" id="cta-link-proprio" target="_blank" rel="noopener noreferrer" class="btn btn-green" style="width: 100%;">
+              Solicitar estudo personalizado
+            </a>
+          </div>
+
+          <!-- Opção 2: Energia Solar por Assinatura -->
+          <div class="option-card">
+            <div>
+              <span class="option-badge">Modalidade 2: Sem Obras e Sem Investimento</span>
+              <h3 class="option-title">Energia Solar por Assinatura</h3>
+              <p class="option-desc">Para imóveis alugados, apartamentos ou empresas que não farão obras no imóvel.</p>
+
+              <div class="numbers-box">
+                <div class="number-row">
+                  <span class="label">Fatura com créditos aplicados:</span>
+                  <span class="val" id="val-new-assinatura">R$ 1.020</span>
+                </div>
+                <div class="number-row">
+                  <span class="label">Economia mensal direta:</span>
+                  <span class="val green-bold" id="val-save-assinatura">R$ 180</span>
+                </div>
+                <div class="number-row">
+                  <span class="label">Custo de instalação ou obras:</span>
+                  <span class="val">R$ 0,00</span>
+                </div>
+              </div>
+
+              <ul class="feature-list">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Desconto de até 15% a 20% na fatura
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Zero obras, reformas ou instalação no local
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Adesão 100% digital e sem fidelidade obrigatória
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" id="cta-link-assinatura" target="_blank" rel="noopener noreferrer" class="btn btn-white" style="width: 100%;">
+              Solicitar estudo para assinatura
+            </a>
+          </div>
+        </div>
+
+        <div class="sim-disclaimer">
+          * Nota: Os valores apresentados acima são estimativas iniciais para fins ilustrativos. O estudo técnico definitivo depende da análise minuciosa da sua fatura real de energia da CEMIG, grupo tarifário e das condições estruturais do imóvel.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       7. PROVAS & CREDIBILIDADE REGIONAL CONFIRMADA
+  ════════════════════════════════════════════════════════════ -->
+  <section class="trust-section" id="sobre">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Transparência & Solidez</span>
+        <h2 class="section-title">Engenharia Local de Confiança</h2>
+        <p class="section-subtitle">
+          Fundada no ano de 2020 em Montes Claros, a Enerel une rigor técnico, atendimento próximo e segurança jurídica:
+        </p>
+      </div>
+
+      <div class="trust-grid">
+        <div class="trust-card">
+          <div class="trust-card-number">2020</div>
+          <div class="trust-card-label">Ano de fundação da Enerel em Montes Claros - MG</div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-card-number">100%</div>
+          <div class="trust-card-label">Projetos homologados conforme normas da CEMIG</div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-card-number">CREA-MG</div>
+          <div class="trust-card-label">Responsabilidade técnica com emissão de ART</div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-card-number">25 Anos</div>
+          <div class="trust-card-label">Garantia técnica de eficiência nos módulos solares</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       8. TABELA COMPARATIVA
+  ════════════════════════════════════════════════════════════ -->
+  <section class="comparison-section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Comparativo Transparente</span>
+        <h2 class="section-title">Qual modalidade faz mais sentido para você?</h2>
+        <p class="section-subtitle">
+          Veja a diferença prática entre continuar pagando a fatura tradicional ou adotar a Enerel:
+        </p>
+      </div>
+
+      <div class="table-container">
+        <table class="clean-table">
+          <thead>
+            <tr>
+              <th style="width: 28%;">Critério</th>
+              <th style="width: 24%;">CEMIG Tradicional</th>
+              <th style="width: 24%;">Assinatura Solar</th>
+              <th style="width: 24%;" class="col-highlight">Compre Seu Sistema</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Redução na Conta</strong></td>
+              <td><span class="tag-negative">0% (Sujeito a aumentos)</span></td>
+              <td><span class="tag-positive">Até 15% a 20%</span></td>
+              <td class="col-highlight"><span class="tag-positive">Até 95% de corte</span></td>
+            </tr>
+            <tr>
+              <td><strong>Investimento Inicial</strong></td>
+              <td>Nenhum</td>
+              <td><span class="tag-positive">R$ 0,00</span></td>
+              <td class="col-highlight">À vista ou Financiado (Parcela substitui a conta)</td>
+            </tr>
+            <tr>
+              <td><strong>Necessidade de Obras</strong></td>
+              <td>Não</td>
+              <td><span class="tag-positive">Zero obras</span></td>
+              <td class="col-highlight">Instalação no telhado ou solo</td>
+            </tr>
+            <tr>
+              <td><strong>Patrimônio e Valorização</strong></td>
+              <td><span class="tag-negative">Nenhum</span></td>
+              <td>Economia imediata</td>
+              <td class="col-highlight"><span class="tag-positive">Valoriza o imóvel e vira patrimônio</span></td>
+            </tr>
+            <tr>
+              <td><strong>Garantia de Desempenho</strong></td>
+              <td>Não se aplica</td>
+              <td>Contrato contínuo sem fidelidade</td>
+              <td class="col-highlight"><span class="tag-positive">25 Anos nos módulos fotovoltaicos</span></td>
+            </tr>
+            <tr>
+              <td><strong>Perfil Indicado</strong></td>
+              <td>—</td>
+              <td>Aluguel, apartamentos, pequenos comércios</td>
+              <td class="col-highlight">Casas próprias, galpões, fazendas, indústrias</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       9. DÚVIDAS FREQUENTES (FAQ)
+  ════════════════════════════════════════════════════════════ -->
+  <section class="faq-section" id="faq">
+    <div class="container faq-container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Esclarecimentos</span>
+        <h2 class="section-title">Perguntas Frequentes</h2>
+      </div>
+
+      <div class="faq-item open">
+        <div class="faq-question">
+          <span>Como funciona a energia solar por assinatura?</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-answer">
+          Usinas solares parceiras geram energia limpa e injetam na rede da CEMIG, gerando créditos de energia. Ao contratar o plano da Enerel, esses créditos são abatidos diretamente da sua fatura mensal. Você continua recebendo energia normalmente pela rede da CEMIG, porém pagando menos e sem precisar fazer nenhuma obra no seu imóvel.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Como funciona o financiamento para compra do sistema próprio?</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-answer">
+          Trabalhamos em parceria com as principais instituições financeiras. Na grande maioria dos casos, a parcela do financiamento é calculada para ficar no mesmo patamar do valor que você já gasta hoje com a conta da CEMIG. Assim, você troca o pagamento de uma despesa contínua por um patrimônio que será seu.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>O que é estudo de proteção e parametrização de relés?</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-answer">
+          São serviços técnicos exigidos pela concessionária para instalações em média tensão (cabines primárias e usinas solares). O estudo calcula os níveis de segurança e a parametrização ajusta os relés eletrônicos para desligarem apenas o ponto exato de uma eventual falha elétrica, garantindo que o resto da indústria continue funcionando sem queimar transformadores.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Qual a região de atendimento da Enerel?</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="faq-answer">
+          Nossa sede física está localizada na Av. Dulce Sarmento, 2126 - Bairro Esplanada, em Montes Claros - MG. Atendemos com agilidade presencial e equipes técnicas especializadas toda a região do Norte de Minas Gerais.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       10. CTA FINAL REFINADO
+  ════════════════════════════════════════════════════════════ -->
+  <section class="cta-banner">
+    <div class="container cta-banner-content">
+      <h2>Precisa de uma solução energética para sua casa ou empresa?</h2>
+      <p>Fale com a equipe da Enerel e receba uma orientação inicial para entender qual solução faz mais sentido para o seu consumo.</p>
+      
+      <a href="https://wa.me/5538998227582?text=Ol%C3%A1!%20Gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20inicial%20com%20a%20engenharia%20da%20Enerel." target="_blank" rel="noopener noreferrer" class="btn btn-green" style="background: #25D366; color: #FFFFFF; padding: 16px 36px; font-size: 1.08rem; box-shadow: 0 8px 24px rgba(0,0,0,0.25);">
+        Falar com a engenharia
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       FOOTER INSTITUCIONAL (COM DADOS REAIS DE MONTES CLAROS)
+  ════════════════════════════════════════════════════════════ -->
+  <footer class="footer" id="contato">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo-enerel.png" alt="Enerel Energia Solar e Engenharia Elétrica" style="height: 42px; width: auto;" />
+          <p>
+            Engenharia elétrica especializada e soluções em energia solar fotovoltaica. Sede em Montes Claros e atendimento em todo o Norte de Minas Gerais.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contatos Diretos</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span>WhatsApp:</span>
+              <a href="https://wa.me/5538998227582" target="_blank" rel="noopener noreferrer">(38) 9 9822-7582</a>
+            </li>
+            <li>
+              <span>Telefone:</span>
+              <a href="tel:3832120961">(38) 3212-0961</a>
+            </li>
+            <li>
+              <span>E-mail:</span>
+              <a href="mailto:contato@enerel.com.br">contato@enerel.com.br</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Atendimento Regional</h4>
+          <ul class="footer-contact-list">
+            <li>Av. Dulce Sarmento, 2126</li>
+            <li>Bairro Esplanada — Montes Claros / MG</li>
+            <li>CEP: 39400-840</li>
+            <li style="margin-top: 10px;">
+              <a href="https://www.instagram.com/enerelenergiasolar/" target="_blank" rel="noopener noreferrer" style="color: var(--green-primary); font-weight: 700;">
+                Instagram @enerelenergiasolar
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>Enerel © 2026 – Todos os Direitos Reservados. Homologação CEMIG • Responsável Técnico CREA-MG.</div>
+        <div>Desenvolvido com padrão de excelência por <a href="https://impulsy.ai" target="_blank" rel="noopener noreferrer" style="color: var(--green-primary); text-decoration: none; font-weight: 700;">Impulsy.ai</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════════════════════
+       FLOATING WHATSAPP
+  ════════════════════════════════════════════════════════════ -->
+  <a href="https://wa.me/5538998227582?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Enerel%20e%20gostaria%20de%20falar%20com%20um%20especialista." target="_blank" rel="noopener noreferrer" class="float-wa" title="Falar no WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+    <span>Falar no WhatsApp</span>
+  </a>
+
+  <!-- ════════════════════════════════════════════════════════════
+       JAVASCRIPT FUNCIONAL
+  ════════════════════════════════════════════════════════════ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // FAQ Accordion
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const q = item.querySelector('.faq-question');
+        q.addEventListener('click', () => {
+          const isOpen = item.classList.contains('open');
+          faqItems.forEach(i => i.classList.remove('open'));
+          if (!isOpen) item.classList.add('open');
+        });
+      });
+
+      // Simulador de Economia
+      const rangeInput = document.getElementById('range-input');
+      const sliderDisplay = document.getElementById('slider-display');
+      
+      const valNewProprio = document.getElementById('val-new-proprio');
+      const valSaveProprio = document.getElementById('val-save-proprio');
+      const valYearProprio = document.getElementById('val-year-proprio');
+      const ctaProprio = document.getElementById('cta-link-proprio');
+
+      const valNewAssinatura = document.getElementById('val-new-assinatura');
+      const valSaveAssinatura = document.getElementById('val-save-assinatura');
+      const ctaAssinatura = document.getElementById('cta-link-assinatura');
+
+      function formatMoney(n) {
+        return 'R$ ' + Math.round(n).toLocaleString('pt-BR');
+      }
+
+      function update(bill) {
+        sliderDisplay.textContent = formatMoney(bill);
+
+        // Sistema Próprio: até 95% de corte
+        const custoTaxaMinima = Math.max(70, bill * 0.06);
+        const economiaProprio = bill - custoTaxaMinima;
+        const economiaAnoProprio = economiaProprio * 12;
+
+        valNewProprio.textContent = formatMoney(custoTaxaMinima);
+        valSaveProprio.textContent = formatMoney(economiaProprio);
+        valYearProprio.textContent = formatMoney(economiaAnoProprio);
+
+        // Assinatura: até 15% de desconto garantido
+        const economiaAssinatura = bill * 0.15;
+        const novaContaAssinatura = bill - economiaAssinatura;
+
+        valNewAssinatura.textContent = formatMoney(novaContaAssinatura);
+        valSaveAssinatura.textContent = formatMoney(economiaAssinatura);
+
+        // Links Dinâmicos de WhatsApp com mensagem contextual
+        const phone = "5538998227582";
+        const msgP = encodeURIComponent(`Olá Enerel! Simulei minha conta da CEMIG de ${formatMoney(bill)} no site e vi uma estimativa de economia de ${formatMoney(economiaProprio)}/mês para Sistema Próprio. Gostaria de solicitar um estudo técnico personalizado.`);
+        ctaProprio.href = `https://wa.me/${phone}?text=${msgP}`;
+
+        const msgA = encodeURIComponent(`Olá Enerel! Simulei minha conta da CEMIG de ${formatMoney(bill)} e gostaria de solicitar um estudo para Energia Solar por Assinatura (economia estimada de ${formatMoney(economiaAssinatura)}/mês sem obras).`);
+        ctaAssinatura.href = `https://wa.me/${phone}?text=${msgA}`;
+      }
+
+      if (rangeInput) {
+        rangeInput.addEventListener('input', (e) => update(parseFloat(e.target.value)));
+        update(parseFloat(rangeInput.value));
+      }
+    });
+  </script>
+</body>
+</html>
