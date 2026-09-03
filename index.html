@@ -61,34 +61,19 @@
     /* ════════════════════════════════════════════════════════════
        EFEITOS DE CARREGAMENTO & SCROLL REVEAL (SUAVES E MODERNOS)
     ════════════════════════════════════════════════════════════ */
-    /* Animação de entrada imediata no carregamento do Hero */
+    /* Animação suave do texto no carregamento inicial */
     .hero-text-content {
-      animation: heroContentFadeIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
-    }
-
-    .hero-bg-photo img {
-      animation: heroPhotoFadeScale 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation: heroContentFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
     }
 
     @keyframes heroContentFadeIn {
       from {
         opacity: 0;
-        transform: translateY(28px);
+        transform: translateY(18px);
       }
       to {
         opacity: 1;
         transform: translateY(0);
-      }
-    }
-
-    @keyframes heroPhotoFadeScale {
-      from {
-        opacity: 0;
-        transform: scale(1.06);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
       }
     }
 
@@ -117,7 +102,7 @@
         transform: none !important;
         transition: none !important;
       }
-      .hero-text-content, .hero-bg-photo img {
+      .hero-text-content {
         animation: none !important;
         opacity: 1 !important;
         transform: none !important;
@@ -350,6 +335,7 @@
       height: 100%;
       z-index: 1;
       pointer-events: none;
+      overflow: hidden;
     }
 
     .hero-bg-photo img {
@@ -367,6 +353,8 @@
       left: 0;
       width: 100%;
       height: 100%;
+      z-index: 2;
+      pointer-events: none;
       background: linear-gradient(
         to right,
         #FFFFFF 0%,
